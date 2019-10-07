@@ -1,8 +1,9 @@
 // JavaScript function that wraps everything
 $(document).ready(function () {
+    
     let maxGuess = 15;
     let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    let songNames = ["push it to the limit", "im hot tonight", "shes on fire"]
+    let songNames = ["pushit to the limit", "im hot tonight", "shes on fire"]
 
     let songNames = songNames[Math.floor(Math.random() * songNames.length)];
 
@@ -23,6 +24,16 @@ $(document).ready(function () {
     $(".pause-button").on("click", function () {
         audioElement.pause();
     });
+
+    let guess = prompt("Guess a letter, or click Cancel to stop playing.");
+    v if (guess === null) {
+    break;
+    w } else if (guess.length !== 1) {
+        alert("Please enter a single letter.");
+        } else {
+x // Update the game state with the guess
+}
+
 
     // pick a song from array in order 
 
