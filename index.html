@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- Unique CSS Changes -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- JS Link -->
     <script src="assets/javascript/game.js"></script>
 </head>
@@ -22,24 +20,32 @@
     <div class="container">
         <div class="header">
             <h1>"You want to play games? Okay, I play with you."</h1>
+        </div>
+        <div>
             <img src="assets/images/scarface.jpg" alt="" class="img scarface-img">
         </div>
         <div class="musicControls" class="text-center">
-            <button class="btn btn-warning btn-xs theme-button">
-                <span class="fa fa-music"></span> Play Intro</button>
-            <button class="btn btn-dark btn-xs pause-button">
-                <span class="fa fa-pause"></span> Pause Song</button>
-        </div>
+                <button class="btn btn-warning btn-xs theme-button">
+                    <span class="fa fa-music"></span> Play Intro</button>
+                <button class="btn btn-dark btn-xs pause-button">
+                    <span class="fa fa-pause"></span> Pause Song</button>
+                <audio id="intro-audio">
+                    <source src="assets/intro.mp3">
+                </audio>
+            </div>
         <div class="game-box">
             <h3>Guess two out of the three song names correctly to win! </h3>
             <p>Press any letter to begin guessing.</p>
-            <p>Wins:</p>
-            <p></p>
-            <p><u>Current Word:</u></p>
-            <p></p>
-            <p>Number of Guesses Remaining:</p>
-            <p>Letters Guessed So Far:</p>
-            <p></p>
+            <h2><u>Current Word:</u></h2>
+            <div id="currentWord"></div>
+            <h2>Number of Guesses Remaining:</h2>
+            <div id="guessesDiv"></div>
+            <h2>Letters Guessed So Far:</h2>
+            <div id="wrongLetters"></div>
+            <h2>Wins:</h2>
+            <div id="winDiv"></div>
+            <h2>Losses:</h2>
+            <div id="lossDiv"></div>
         </div>
         <div class="footer">
             <p></p>
@@ -49,6 +55,26 @@
                     <button class="btn btn-dark btn-xs outro-pause-button">
                         <span class="fa fa-pause"></span> Pause Outro</button>
                 </div>
+        </div>
+        <div>
+            <audio id="intro">
+                <source src="assets/intro.mp3" type="audio/mp3">
+            </audio>
+            <audio id="im-hot-tonight">
+                <source src="assets/imhottonight.mp3" type="audio/mp3">
+            </audio>
+            <audio id="push-it-to-the-limit">
+                <source src="assets/pushit.mp3" type="audio/mp3">
+            </audio>
+            <audio id="shes-on-fire">
+                <source src="assets/shesonfire.mp3" type="audio/mp3">
+            </audio>
+            <audio id="ginas-theme">
+                <source src="assets/ginastheme.mp3" type="audio/mp3">
+            </audio>
+            <audio id="tonys-theme">
+                <source src="assets/tonystheme.mp3" type="audio/mp3">
+            </audio>
         </div>
     </div>
 </body>
