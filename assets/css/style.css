@@ -45,6 +45,9 @@ h1 {
 h3 {
     padding-top: 15px;
 }
+.hide {
+    display: none;
+}
 .footer {
     margin-bottom: 50px;
 }

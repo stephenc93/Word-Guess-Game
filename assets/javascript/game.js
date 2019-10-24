@@ -166,15 +166,20 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("wrongLetters").innerHTML = "  " + wrongGuess.join(" ");
         victoryOrDefeat();
 }
+    function showHide() {
+        document.getElementsByClassName("hide").style.display = 'block';
+    }
 
     function victoryOrDefeat() {
         if (wins >= 2) {
             onFire.pause();
             outroTheme();
+            showHide();
         }
         else if (losses >= 2) {
             onFire.pause();
             outroLoss();
+            showHide();
         }
     }
 
