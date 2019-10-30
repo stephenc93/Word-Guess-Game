@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function Game() {
         currentAnswer = answers[cycle];
-        cycle++;
+        if (cycle < 3) {
+            cycle++;
+        }
         lettersOfAnswer = currentAnswer.split("");
         blanks = lettersOfAnswer.length;
         for (let i = 0; i < blanks; i++) {
