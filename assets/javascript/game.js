@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function Game() {
         currentAnswer = answers[cycle];
-        if (cycle < 3) {
+        if (cycle < answers.length) {
             cycle++;
         }
         lettersOfAnswer = currentAnswer.split("");
@@ -167,21 +167,18 @@ document.addEventListener("DOMContentLoaded", function () {
         complete();
         document.getElementById("wrongLetters").innerHTML = "  " + wrongGuess.join(" ");
         victoryOrDefeat();
-}
-    function showHide() {
-        document.getElementsByClassName("hide").style.display = 'block';
     }
 
     function victoryOrDefeat() {
-        if (wins >= 2) {
+        if (currentAnswer === answers[2] && wins >= 2) {
             onFire.pause();
             outroTheme();
-            showHide();
+            alert("You don't break yours for nobody meng! You win.");
         }
-        else if (losses >= 2) {
+        else if (currentAnswer === answers[2] && losses >= 2) {
             onFire.pause();
-            outroLoss();
-            showHide();
+            outroTheme();
+            alert("You're a cockroach. Try again.");        
         }
     }
 
